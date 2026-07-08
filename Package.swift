@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "AdstirSDKMaxAdapter",
-    platforms: [.iOS(.v12)],
+    platforms: [.iOS(.v13)],
     products: [
         .library(
             name: "AdstirAdsMaxAdapter",
@@ -18,23 +18,23 @@ let package = Package(
         ),
         .package(
             url: "https://github.com/united-adstir/adstirsdk-swift-package.git",
-            exact: "2.17.6"
+            exact: "2.17.7"
         )
     ],
     targets: [
         .target(
             name: "AdstirAdsMaxAdapterTarget",
             dependencies: [
-              .target(name: "AdstirAdsMaxAdapter"),
-              .product(name: "AppLovinSDK", package: "AppLovin-MAX-Swift-Package"),
-              .product(name: "AdstirAds", package: "adstirsdk-swift-package"),
+                .target(name: "AdstirAdsMaxAdapter"),
+                .product(name: "AppLovinSDK", package: "AppLovin-MAX-Swift-Package"),
+                .product(name: "AdstirAds", package: "adstirsdk-swift-package"),
             ],
             path: "Sources"
         ),
         .binaryTarget(
             name: "AdstirAdsMaxAdapter",
-            url: "https://dl.ad-stir.com/sdk/spm/2.17.6/ALAdstirMediationAdapter.xcframework.zip",
-            checksum: "f5775d29c857a118a7fab505c013cdf93f3b481d25269fc6702b90bc028be6c1"
+            url: "https://dl.ad-stir.com/sdk/spm/2.17.7/ALAdstirMediationAdapter.xcframework.zip",
+            checksum: "d0221215dc82ad3c7917f185b3e73fd7bda000ab9f9ef18003bf3870407f51dc"
         ),
     ]
 )
